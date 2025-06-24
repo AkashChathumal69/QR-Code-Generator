@@ -131,21 +131,33 @@ main {
   align-items: center;
   margin-top: 20px;
 }
+}
 
-.loading {
+.loader {
+  margin: 20px auto;
   width: 60px;
   height: 60px;
   border: 8px solid #f3f3f3;
   border-top: 8px solid #3498db;
   border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
-  display: none; /* Hide by default */
-}
+} 
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg);}
+  100% { -webkit-transform: rotate(360deg);}
+}
+
+#qrcode{
+  margin: auto;
+  max-width: 1200px;
+  width: max-content;
 }
 
 
-}
