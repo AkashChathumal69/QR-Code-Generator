@@ -96,12 +96,6 @@ main {
   background-color: #2980b9;
 }
 
-/* Generated QR Code Section */
-#qrCode {
-  margin-top: 20px;
-  text-align: center;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     main {
@@ -130,7 +124,23 @@ main {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  }
+  #qrCode {
+    width: 100%;
+    justify-content: center;
+  }
+  #downloadQR,
+  .downloadQR {
+    width: 90%;
+    font-size: 1rem;
+  }
 }
+
+.generated {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .loader {
@@ -155,9 +165,29 @@ main {
 }
 
 #qrcode{
-  margin: auto;
-  max-width: 1200px;
-  width: max-content;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
+#downloadQR,
+.downloadQR {
+  margin-top: 18px;
+  padding: 12px 28px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+  transition: background 0.3s;
+  display: inline-block;
+}
 
+#downloadQR:hover,
+.downloadQR:hover {
+  background-color: #217dbb;
+}

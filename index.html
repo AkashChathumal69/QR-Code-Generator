@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR code generator</title>
-    <script src="./script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -22,7 +28,7 @@
             <p>Generate QR codes for any text or URL. Just enter the text or URL in the input field below and click "Generate QR Code".</p>
         
             <form id="qrForm">
-            <input type="text" id="qrText" name="qrText" placeholder="Enter text or URL" required class="qr-input">
+            <input type="text" id="qrText" name="qrText" placeholder="Enter text or URL"  class="qr-input">
             <select id="qrSize" name="qrSize" class="qr-size">
                 <option value="150">Small (150x150)</option>
                 <option value="250" selected>Medium (250x250)</option>
@@ -34,11 +40,12 @@
         </div>
     </main>
     
-    <div class="generated">
+    <div class="generated" id="generated">
         <!--spinner-->
         <div class="loader" id="spinning"></div>
         <!--image append-->
-        <div class="qr-code"></div>
+        <div id="qrCode"></div>
+        <button id="downloadQR" class="download-btn" style="display: none;">Download QR Code</button>
     </div>
 </body>
 </html>
